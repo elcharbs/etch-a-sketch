@@ -4,7 +4,7 @@ const gridSquare = document.querySelector('.gridSquare');
 
 // Initial script to add squares
 function drawGrid (squareCount) {
-    console.log("initialGridLoad started");
+    console.log("drawGrid started");
     // Clear container
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.lastChild);
@@ -39,7 +39,6 @@ function updateHoverListeners () {
     gridSquares.forEach((square) => {
         console.log(square);
         square.addEventListener('mouseover', () => {
-            console.log("OOOO A MOUSE!");
             square.classList.add('blackSquare');
         })
     })     
