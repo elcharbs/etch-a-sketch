@@ -7,6 +7,7 @@ body {
     width: 100vw;
     margin: 0;
 }
+
 .container {
     display: flex;
     width: 100%;
@@ -14,14 +15,22 @@ body {
     background-color: red;
     padding: 2.5%;
     margin-bottom: 10px;
+    align-content: stretch;
+    flex-wrap: wrap;
 }
 
-.gridSquare {
-    flex: auto;
-    background-color: green;
-    border-color:black;
-    border: 1px;
-    border-style: solid;
+
+.gridSquare, .gridSquareVertical {
+    background-color: white;
+    max-width: 100%; /* Prevent exceeding the container's width */
+    flex-direction: column;
+    height: 100%; /* Ensure this is within a context where its height is determinable */
+    flex: 1;
+    display: flex;
+}
+
+.blackSquare {
+    background: #000
 }
 
 .buttonBox {
@@ -31,7 +40,7 @@ body {
     flex-direction: column;
 }
 
-.buttonBoxTop, .buttonBoxBottom {
+.buttonBoxTop {
     display: flex;
     justify-content: center;
 }
